@@ -1,0 +1,192 @@
+/* Estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  overflow: hidden;
+}
+
+/* Tela de carregamento */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a2342 0%, #1a365d 50%, #0a2342 100%);
+}
+
+/* Flores de fundo */
+.background-flowers {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.flower {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 70%, transparent 100%);
+  filter: blur(0.5px);
+  opacity: 0.3;
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+/* Círculo principal */
+.main-circle-container {
+  position: relative;
+  margin-bottom: 64px;
+}
+
+.main-circle {
+  width: 224px;
+  height: 224px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.name-container {
+  text-align: center;
+  z-index: 10;
+}
+
+.name {
+  font-family: "Dancing Script", cursive;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3);
+  filter: brightness(1.2);
+}
+
+/* Flores decorativas embaixo */
+.bottom-flowers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.bottom-flower {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.4) 70%, transparent 100%);
+  filter: blur(0.3px);
+}
+
+/* Barra de progresso */
+.progress-container {
+  width: 320px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white);
+  border-radius: 9999px;
+  width: 100%;
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+
+/* Texto de carregamento */
+.loading-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* Animações */
+@keyframes float-gentle {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Classes de animação */
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.floating-flower {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in-up-delay-1 {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+.fade-in-up-delay-2 {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards 1s;
+}
+
+.fade-in-up-delay-3 {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards 1.5s;
+}
