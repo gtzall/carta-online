@@ -1,0 +1,1 @@
+Um presente de dias dos namorados para uma garota muito especial. a ideia foi um site no estilo carta com declaraçoes e fotos, data do relacionamento e todo um toque moderno, utilizando o vscode como editor de código, juntamente de 
